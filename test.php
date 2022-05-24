@@ -2,6 +2,7 @@
 $database = "omnes_sports";
 
 
+
 $db_handle = mysqli_connect('localhost', 'root', '' );
 $db_found = mysqli_select_db($db_handle, $database);
  //si le BDD existe, faire le traitement
@@ -21,7 +22,6 @@ if ($db_found) {
     echo "<th>" . "Sport" . "</th>";
     echo "<th>" . "Mail" . "</th>";
     echo "<th>" . "Mdp" . "</th>";
-    echo "<th>" . "Choix" . "</th>";
     echo "</tr>";
     echo "<tr>";
     $a=1;
@@ -39,6 +39,7 @@ if ($db_found) {
         echo "<td>" . $data['sport'] . "</td>";
         echo "<td>" . $data['mail'] . "</td>";
         echo "<td>" . $data['mdp'] . "</td>";
+
         echo "</tr>";
         $a=$a+1;
 
