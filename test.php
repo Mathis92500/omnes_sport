@@ -2,7 +2,7 @@
 $database = "omnes_sports";
 
 
-
+echo "a";
 $db_handle = mysqli_connect('localhost', 'root', '' );
 $db_found = mysqli_select_db($db_handle, $database);
  //si le BDD existe, faire le traitement
