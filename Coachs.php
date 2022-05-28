@@ -2,10 +2,12 @@
 
 <?php
 /*session_start();
-$ident = ($_GET['action']);
-$_SESSION["idCoach"] = $ident;
+$nom = ($_GET['action']);
+
+$_SESSION["nomMedecin"] = $nom;
 */
 ?>
+
 
 
 <head>
@@ -19,7 +21,7 @@ $_SESSION["idCoach"] = $ident;
   //include("Bdd_connect.php");
 
   // identifier BDD
-  $database = "Omnes Sport";
+  $database = "omnes sport";
   $db_handle = mysqli_connect('localhost', 'root', '');
   $db_found = mysqli_select_db($db_handle, $database);
   ?>
@@ -37,29 +39,29 @@ $_SESSION["idCoach"] = $ident;
         <div id="link1" class="dItem">Musculation
           <!--  Inside Dropdown -->
           <div class="dropdown-two">
-            <a id="Dumais" class="dItem" onClick="reply_click(this.id)">Coach 1</a>
-            <a id="2" class="dItem" onClick="reply_click(this.id)">Coach 2</a>
+            <a name="Identifiant" value="1" class="dItem" onClick="reply_click(this.value)">Coach 1</a>
+            <a name="Identifiant" value="2" class="dItem" onClick="reply_click(this.value)">Coach 2</a>
           </div>
         </div>
         <div id="link1" class="dItem">Fitness
           <!--  Inside Dropdown -->
           <div class="dropdown-two">
-            <a id="3" class="dItem" onClick="reply_click(this.id)">Coach 3</a>
-            <a id="4" class="dItem" onClick="reply_click(this.id)">Coach 4</a>
+            <a name="Identifiant" value="3" class="dItem" onClick="reply_click(this.id)">Coach 3</a>
+            <a name="Identifiant" value="4" class="dItem" onClick="reply_click(this.id)">Coach 4</a>
           </div>
         </div>
         <div id="link1" class="dItem">Biking
           <!--  Inside Dropdown -->
           <div class="dropdown-two">
-            <a id="5" class="dItem" onClick="reply_click(this.id)">Coach 5</a>
-            <a id="6" class="dItem" onClick="reply_click(this.id)">Coach 6</a>
+            <a name="Identifiant" value="5" class="dItem" onClick="reply_click(this.id)">Coach 5</a>
+            <a name="Identifiant" value="6" class="dItem" onClick="reply_click(this.id)">Coach 6</a>
           </div>
         </div>
         <div id="link1" class="dItem">Cardio-Training
           <!--  Inside Dropdown -->
           <div class="dropdown-two">
-            <a id="7" class="dItem" onClick="reply_click(this.id)">Coach 7</a>
-            <a id="8" class="dItem" onClick="reply_click(this.id)">Coach 8</a>
+            <a name="Identifiant" value="7" class="dItem" onClick="reply_click(this.id)">Coach 7</a>
+            <a name="Identifiant" value="8" class="dItem" onClick="reply_click(this.id)">Coach 8</a>
           </div>
         </div>
       </div>
@@ -104,16 +106,61 @@ $_SESSION["idCoach"] = $ident;
 
   <script type="text/javascript">
     var clicked_id;
+
     function reply_click(clicked_id) {
-      //alert(clicked_id);
       var identi;
     return identi;
     }
-    var identif=0;
-    identif= reply_click(clicked_id);   
-    console.log(identif); 
+
+    //$identif= reply_click(clicked_id);   
   </script>
  
+
+ <div class="container features">
+        <div class="infmed">
+<?php 
+
+$identif = isset($_POST["Identifiant"])? $_POST["Identifiant"] :"";
+$identif = (int)$identif;
+
+$sql = "SELECT * FROM coachs WHERE identifiant='$identif'"; ?>
+            <div class="col-sm-4">
+
+            <ul class="imgmed"><?php $result = mysqli_query($db_handle, $sql);
+                                    while ($data = mysqli_fetch_assoc($result)) {
+                                        //$image = $data['photomedecin'];
+                                        //echo  "<img src='$image' height='300' width='250'>" ;
+                                    } ?> </ul>
+            </div>
+
+            <div class="col-sm-8">
+
+
+                
+                <ul class="infos"> <?php $result = mysqli_query($db_handle, $sql);
+                                    // $donnee = "<a><img src=\"$data[photomedecin]\" width=\"130\" height=\"100\"></a>";
+                                    while ($data = mysqli_fetch_assoc($result)) {
+                                        echo "nom: " . $data['nom'] . '<br>';
+                                        echo "prenom: " .$data['prenom'] . '<br>';
+                                        echo "sport: " . $data['sport'] . '<br>';
+                                        echo "Telephone: " . $data['telephone'] . '<br>';
+                                        echo "Email: " . $data['mail'] . '<br>';
+                                        echo "Salle : " . $data['bureau'] . '<br>';
+                                        echo "ID : " . $identif . '<br>';
+
+                                        // echo " <img src= " . $donnee;
+
+                                    } ?> </ul>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
 
 
   <div class="Kard">
