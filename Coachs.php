@@ -21,9 +21,10 @@ $_SESSION["nomMedecin"] = $nom;
   //include("Bdd_connect.php");
 
   // identifier BDD
-  $database = "omnes sport";
+  $database = "omnes_sports";
   $db_handle = mysqli_connect('localhost', 'root', '');
   $db_found = mysqli_select_db($db_handle, $database);
+  
   ?>
 
 </head>
@@ -39,8 +40,8 @@ $_SESSION["nomMedecin"] = $nom;
         <div id="link1" class="dItem">Musculation
           <!--  Inside Dropdown -->
           <div class="dropdown-two">
-            <a name="Identifiant" value="1" class="dItem" onClick="reply_click(this.value)">Coach 1</a>
-            <a name="Identifiant" value="2" class="dItem" onClick="reply_click(this.value)">Coach 2</a>
+            <a name="DUMAIS" href="musculation.php" value="1" class="dItem" onclick="affiche_coach()">Coach 1</a>
+            <a name="Identifiant" href="fitness.php" value="2" class="dItem" onClick="reply_click(this.value)">Coach 2</a>
           </div>
         </div>
         <div id="link1" class="dItem">Fitness
@@ -105,6 +106,24 @@ $_SESSION["nomMedecin"] = $nom;
   </div>
 
   <script type="text/javascript">
+    function affiche_coach(){
+      <?php 
+echo "ok";
+$identif = isset($_POST["Identifiant"])? $_POST["Identifiant"] :"";
+$identif = (int)$identif;
+
+
+$sql = "SELECT * FROM coachs WHERE nom='DUMAIS'";
+$result = mysqli_query($db_handle, $sql);
+           
+ while ($data = mysqli_fetch_assoc($result)) {
+    echo $identif;
+    echo $data['nom'] ;
+
+                                        //$image = $data['photomedecin'];
+                                        //echo  "<img src='$image' height='300' width='250'>" ;
+                                    } ?> 
+    }
     var clicked_id;
 
     function reply_click(clicked_id) {
@@ -123,14 +142,17 @@ $_SESSION["nomMedecin"] = $nom;
 $identif = isset($_POST["Identifiant"])? $_POST["Identifiant"] :"";
 $identif = (int)$identif;
 
-$sql = "SELECT * FROM coachs WHERE identifiant='$identif'"; ?>
-            <div class="col-sm-4">
 
-            <ul class="imgmed"><?php $result = mysqli_query($db_handle, $sql);
-                                    while ($data = mysqli_fetch_assoc($result)) {
+$sql = "SELECT * FROM coachs WHERE nom='DUMAIS'";
+$result = mysqli_query($db_handle, $sql);
+           
+ //while ($data = mysqli_fetch_assoc($result)) {
+   // echo $identif;
+    //echo $data['nom'] ;
+
                                         //$image = $data['photomedecin'];
                                         //echo  "<img src='$image' height='300' width='250'>" ;
-                                    } ?> </ul>
+                         //           } ?> </ul>
             </div>
 
             <div class="col-sm-8">
@@ -139,18 +161,18 @@ $sql = "SELECT * FROM coachs WHERE identifiant='$identif'"; ?>
                 
                 <ul class="infos"> <?php $result = mysqli_query($db_handle, $sql);
                                     // $donnee = "<a><img src=\"$data[photomedecin]\" width=\"130\" height=\"100\"></a>";
-                                    while ($data = mysqli_fetch_assoc($result)) {
-                                        echo "nom: " . $data['nom'] . '<br>';
-                                        echo "prenom: " .$data['prenom'] . '<br>';
-                                        echo "sport: " . $data['sport'] . '<br>';
-                                        echo "Telephone: " . $data['telephone'] . '<br>';
-                                        echo "Email: " . $data['mail'] . '<br>';
-                                        echo "Salle : " . $data['bureau'] . '<br>';
-                                        echo "ID : " . $identif . '<br>';
+                                   // while ($data = mysqli_fetch_assoc($result)) {
+                                     //   echo "nom: " . $data['nom'] . '<br>';
+                                       // echo "prenom: " .$data['prenom'] . '<br>';
+                                        //echo "sport: " . $data['sport'] . '<br>';
+                                       // echo "Telephone: " . $data['telephone'] . '<br>';
+                                       // echo "Email: " . $data['mail'] . '<br>';
+                                       // echo "Salle : " . $data['bureau'] . '<br>';
+                                        //echo "ID : " . $data['Identifiant'] . '<br>';
 
                                         // echo " <img src= " . $donnee;
 
-                                    } ?> </ul>
+                                  //  } ?> </ul>
 
 
             </div>
