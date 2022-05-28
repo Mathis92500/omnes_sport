@@ -109,60 +109,60 @@ $_SESSION["nomMedecin"] = $nom;
 
     function reply_click(clicked_id) {
       var identi;
-    return identi;
+      return identi;
     }
 
     //$identif= reply_click(clicked_id);   
   </script>
- 
-
- <div class="container features">
-        <div class="infmed">
-<?php 
-
-$identif = isset($_POST["Identifiant"])? $_POST["Identifiant"] :"";
-$identif = (int)$identif;
-
-$sql = "SELECT * FROM coachs WHERE identifiant='$identif'"; ?>
-            <div class="col-sm-4">
-
-            <ul class="imgmed"><?php $result = mysqli_query($db_handle, $sql);
-                                    while ($data = mysqli_fetch_assoc($result)) {
-                                        //$image = $data['photomedecin'];
-                                        //echo  "<img src='$image' height='300' width='250'>" ;
-                                    } ?> </ul>
-            </div>
-
-            <div class="col-sm-8">
 
 
-                
-                <ul class="infos"> <?php $result = mysqli_query($db_handle, $sql);
-                                    // $donnee = "<a><img src=\"$data[photomedecin]\" width=\"130\" height=\"100\"></a>";
-                                    while ($data = mysqli_fetch_assoc($result)) {
-                                        echo "nom: " . $data['nom'] . '<br>';
-                                        echo "prenom: " .$data['prenom'] . '<br>';
-                                        echo "sport: " . $data['sport'] . '<br>';
-                                        echo "Telephone: " . $data['telephone'] . '<br>';
-                                        echo "Email: " . $data['mail'] . '<br>';
-                                        echo "Salle : " . $data['bureau'] . '<br>';
-                                        echo "ID : " . $identif . '<br>';
+  <div class="container features">
+    <div class="infmed">
+      <?php
 
-                                        // echo " <img src= " . $donnee;
+      $identif = isset($_POST["Identifiant"]) ? $_POST["Identifiant"] : "";
+      $identif = (int)$identif;
 
-                                    } ?> </ul>
+      $sql = "SELECT * FROM coachs WHERE identifiant='$identif'"; ?>
+      <div class="col-sm-4">
 
+        <ul class="imgmed"><?php $result = mysqli_query($db_handle, $sql);
+                            while ($data = mysqli_fetch_assoc($result)) {
+                              //$image = $data['photomedecin'];
+                              //echo  "<img src='$image' height='300' width='250'>" ;
+                            } ?> </ul>
+      </div>
 
-            </div>
+      <div class="col-sm-8">
 
 
 
-        </div>
+        <ul class="infos"> <?php $result = mysqli_query($db_handle, $sql);
+                            // $donnee = "<a><img src=\"$data[photomedecin]\" width=\"130\" height=\"100\"></a>";
+                            while ($data = mysqli_fetch_assoc($result)) {
+                              echo "nom: " . $data['nom'] . '<br>';
+                              echo "prenom: " . $data['prenom'] . '<br>';
+                              echo "sport: " . $data['sport'] . '<br>';
+                              echo "Telephone: " . $data['telephone'] . '<br>';
+                              echo "Email: " . $data['mail'] . '<br>';
+                              echo "Salle : " . $data['bureau'] . '<br>';
+                              echo "ID : " . $identif . '<br>';
+
+                              // echo " <img src= " . $donnee;
+
+                            } ?> </ul>
+
+
+      </div>
+
 
 
     </div>
 
 
+  </div>
+
+<!--
   <div class="Kard">
     <div class="card">
       <div class="img-avatar">
@@ -192,7 +192,7 @@ $sql = "SELECT * FROM coachs WHERE identifiant='$identif'"; ?>
       </div>
 
     </div>
-  </div>
+  </div> -->
 
   <footer>
 
