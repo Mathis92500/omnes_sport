@@ -128,7 +128,7 @@ $result = mysqli_query($db_handle, $sql);
 
     function reply_click(clicked_id) {
       var identi;
-    return identi;
+      return identi;
     }
 
     //$identif= reply_click(clicked_id);   
@@ -170,21 +170,48 @@ $result = mysqli_query($db_handle, $sql);
                                        // echo "Salle : " . $data['bureau'] . '<br>';
                                         //echo "ID : " . $data['Identifiant'] . '<br>';
 
-                                        // echo " <img src= " . $donnee;
+      $identif = isset($_POST["Identifiant"]) ? $_POST["Identifiant"] : "";
+      $identif = (int)$identif;
 
                                   //  } ?> </ul>
 
+        <ul class="imgmed"><?php $result = mysqli_query($db_handle, $sql);
+                            while ($data = mysqli_fetch_assoc($result)) {
+                              //$image = $data['photomedecin'];
+                              //echo  "<img src='$image' height='300' width='250'>" ;
+                            } ?> </ul>
+      </div>
 
-            </div>
+      <div class="col-sm-8">
 
 
 
-        </div>
+        <ul class="infos"> <?php $result = mysqli_query($db_handle, $sql);
+                            // $donnee = "<a><img src=\"$data[photomedecin]\" width=\"130\" height=\"100\"></a>";
+                            while ($data = mysqli_fetch_assoc($result)) {
+                              echo "nom: " . $data['nom'] . '<br>';
+                              echo "prenom: " . $data['prenom'] . '<br>';
+                              echo "sport: " . $data['sport'] . '<br>';
+                              echo "Telephone: " . $data['telephone'] . '<br>';
+                              echo "Email: " . $data['mail'] . '<br>';
+                              echo "Salle : " . $data['bureau'] . '<br>';
+                              echo "ID : " . $identif . '<br>';
+
+                              // echo " <img src= " . $donnee;
+
+                            } ?> </ul>
+
+
+      </div>
+
 
 
     </div>
 
 
+  </div>
+
+<!--
   <div class="Kard">
     <div class="card">
       <div class="img-avatar">
@@ -214,7 +241,7 @@ $result = mysqli_query($db_handle, $sql);
       </div>
 
     </div>
-  </div>
+  </div> -->
 
   <footer>
 

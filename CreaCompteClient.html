@@ -1,0 +1,60 @@
+<form method="post" action="traitement.php">
+    <link rel="stylesheet" href="CreaCompte.css">
+ <h1>Créer un compte </h1>
+    <fieldset>
+        <legend>Vos coordonnées</legend> <!-- Titre du fieldset --> 
+ 
+        <label for="nom">Nom *:</label>
+        <input type="text" name="nom" id="nom" required  />
+        <br>
+ 
+        <label for="prenom">Prenom *: </label>
+        <input type="text" name="prenom" id="prenom"  required />
+        <br>
+        <label for="AdresseLigne1">Adresse Ligne 1 *: </label>
+        <input type="text" name="AdresseLigne1" id="AdresseLigne1" required  />
+        <br>
+        <label for="AdresseLigne2">Adresse Ligne 2 :</label>
+        <input type="text" name="AdresseLigne2" id="AdresseLigne2" />
+        <br>
+        <label for="Ville">Ville *:</label>
+        <input type="text" name="Ville" id="Ville" />
+        <br>
+        <label for="CodePostal">Code Postal *:</label>
+        <input type="text" name="CodePostal" id="CodePostal" />
+        <br>
+        <label for="NumeroTel">Numero de Téléphone *:</label>
+        <input type="tel" name="NumeroTel" id="NumeroTel" />
+        <br>
+        <label for="Pays">Pays *:</label>
+        <input type="text" name="Pays" id="Pays" />
+        <br>
+        <label for="Mail">Mail *:</label>
+        <input type="text" name="Mail" id="Mail" required />
+        <br>
+        <label for="MDP">Mot de passe *:</label>
+        <input type="password" name="MDP" id="MDP" required  />
+ 
+        <br>
+ 
+    </fieldset>
+  
+    <fieldset>
+        <legend>Carte Etudiant </legend> <!-- Titre du fieldset -->
+  
+        <p>
+            Avez vous une carte d'Etudiant  :
+ 
+            <input type="radio" name="souhait" value="oui" id="oui" /> <label for="oui">oui</label>
+            <input type="radio" name="souhait" value="non" id="non" /> <label for="non">non</label>
+           
+  
+        <p>
+            <label for="precisions">Si "Autre", veuillez préciser :</label>
+            <textarea name="precisions" id="precisions" cols="40" rows="4"></textarea>
+        </p>
+    </fieldset>
+
+    <input type="submit" value="Creer" />
+
+ </form>
