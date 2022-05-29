@@ -24,59 +24,60 @@
     <div class="navbar">
         <a href="Accueil.html">Omnes Sport</a>
         <a href="Coachs.php">Tout Parcourir</a>
-        <a>Rendez-Vous</a>
-        <a>Votre Compte</a>
+        <a href="RendezVous.html"> Rendez-Vous</a>
+        <a href="Comte.php"> Votre Compte</a>
         <input type="text" placeholder="Search..">
 
     </div>
 
     <div class="creacompte">
-        <form method="post" action="traitement.php">
+        <form method="post" action="CreaCompte.php">
             <link rel="stylesheet" href="CreaCompte.css">
             <h1>Créer un compte </h1>
             <h1></h1>
 
             <h2>Vos coordonnées</h2> <!-- Titre du fieldset -->
 
-            <div class="colonne1">
-                <label for="nom">Nom *:</label>
-                <input class="Client" type="text" name="nom" id="nom" required />
-                <br>
+            <div class="col-sm-4"></div>
+            <label for="nom">Nom *:</label>
+            <input class="Client" type="text" name="nom" id="nom" required />
+            <br>
 
-                <label for="prenom">Prenom *: </label>
-                <input class="Client" type="text" name="prenom" id="prenom" required />
-                <br>
-                <label for="AdresseLigne1">Adresse Ligne 1 *: </label>
-                <input class="Client" type="text" name="AdresseLigne1" id="AdresseLigne1" required />
-                <br>
-                <label for="AdresseLigne2">Adresse Ligne 2 :</label>
-                <input class="Client" type="text" name="AdresseLigne2" id="AdresseLigne2" />
-                <br>
-                <label for="Ville">Ville *:</label>
-                <input class="Client" type="text" name="Ville" id="Ville" />
-                <br>
-            </div>
-            <div class="colonne2">
-                <label for="CodePostal">Code Postal *:</label>
-                <input class="Client" type="text" name="CodePostal" id="CodePostal" />
-                <br>
-                <label for="NumeroTel">Numero de Téléphone *:</label>
-                <input class="Client" type="tel" name="NumeroTel" id="NumeroTel" />
-                <br>
-                <label for="Pays">Pays *:</label>
-                <input class="Client" type="text" name="Pays" id="Pays" />
-                <br>
-                <label for="Mail">Mail *:</label>
-                <input class="Client" type="text" name="Mail" id="Mail" required />
-                <br>
-                <label for="MDP">Mot de passe *:</label>
-                <input class="Client" type="password" name="MDP" id="MDP" required />
-                <br>
+            <label for="prenom">Prenom *: </label>
+            <input class="Client" type="text" name="prenom" id="prenom" required />
+            <br>
+            <label for="adresse_ligne_1">Adresse Ligne 1 *: </label>
+            <input class="Client" type="text" name="adresse_ligne_1" id="adresse_ligne_1" required />
+            <br>
+            <label for="AdresseLigne2">Adresse Ligne 2 :</label>
+            <input class="Client" type="text" name="adresse_ligne_2" id="adresse_ligne_2" />
+            <br>
+            <label for="Ville">Ville *:</label>
+            <input class="Client" type="text" name="ville" id="ville" />
+            <br>
             </div>
 
+            <div class="col-sm-8"></div>
+        <label for="CodePostal">Code Postal *:</label>
+        <input class="Client" type="text" name="code_postal" id="code_postal" />
+        <br>
+        <label for="NumeroTel">Numero de Téléphone *:</label>
+        <input class="Client" type="text" name="numero" id="numero" />
+        <br>
+        <label for="Pays">Pays *:</label>
+        <input class="Client" type="text" name="pays" id="ays" />
+        <br>
+        <label for="Mail">Mail *:</label>
+        <input class="Client" type="text" name="mail" id="mail" required />
+        <br>
+        <label for="MDP">Mot de passe *:</label>
+        <input class="Client" type="password" name="mdp" id="mdp" required />
+        <br>
+        </div>
 
 
-                <h2>Carte Etudiant </h2> <!-- Titre du fieldset -->
+
+    <!-- <h2>Carte Etudiant </h2>  Titre du fieldset 
 
                 <p>
                     Avez vous une carte d'Etudiant :
@@ -90,11 +91,13 @@
                 <p>
                     <label for="precisions">Si "Autre", veuillez préciser :</label>
                     <textarea name="precisions" id="precisions" cols="40" rows="4"></textarea>
-                </p>
+                </p>-->
+    <input type="submit" name="button2" value="Créer votre compte">
+    </div>
 
     </div>
 
-    <footer>
+    <!--<footer>
 
         <h2>Nos services</h2>
         <div class="services">
@@ -117,6 +120,6 @@
         </div>
 
         <p id="contact">Contact : 08 19 17 278 1 | &copy; 2021, Burgure.</p>
-    </footer>
+    </footer>-->
 
 </html>

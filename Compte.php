@@ -1,5 +1,10 @@
 <html lang="fr">
 
+<?php
+// Start the session
+session_start();
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +14,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
 </head>
+
+<?php
+// Set session variables (variables globales)
+$_SESSION["mail"] = "";
+$_SESSION["mdp"] = "";
+?>
 
 <body>
 
@@ -18,7 +30,8 @@
             //alert(clicked_id);
             //console.log(clicked_id);
         }
-        function getIdentifiant(clicked_id) { }
+
+        function getIdentifiant(clicked_id) {}
     </script>
 
     <div class="navbar">
@@ -37,12 +50,49 @@
                 <h2>OmnesSport</h2>
                 <h2>Se connecter </h2>
                 <br>
-                <input id="truc" type="email" placeholder="Email"><br>
-                <input id="truc" type="password" placeholder="Mot de passe"><br>
-                <input id="truc" type="button" value="Connexion"><br>
+                <input id="truc" type="mail" placeholder="Email"><br>
+                <input id="truc" type="mdp" placeholder="Mot de passe"><br>
+                <input id="truc" onclick="clickMe()" type="button" value="Connexion"><br>
                 <br>
                 <a href="CreaCompte.html">Créer votre compte</a>
             </form>
+
+            <script>
+                function clickMe() {
+                    var result = "<?php php_func(); ?>"
+                    document.write(result);
+                }
+            </script>
+
+            <?php
+            function php_func()
+            {
+
+                $database = "omnes_sports";
+                $db_handle = mysqli_connect('localhost', 'root', '');
+                $db_found = mysqli_select_db($db_handle, $database);
+
+                $mdp = isset($_POST["mdp"]) ? $_POST["mdp"] : "";
+                $mail = isset($_POST["mail"]) ? $_POST["mail"] : "";
+
+                if ($db_found) {
+                    $sql = "SELECT * FROM coachs WHERE 'mail'='$mail' and 'mdp'='$mdp'";
+                    $num_rows = mysqli_query($db_handle, $sql);
+
+                    if ($num_rows > 0) {
+                        // do something
+                        echo "Trop bien";
+
+                    } else {
+                        // do something else
+                        echo "Trop nul";
+                    }
+                } else {
+                }
+            }
+            ?>
+
+            
 
 
             <div class="drop drop-1"></div>
@@ -50,7 +100,7 @@
             <div class="drop drop-3"></div>
             <div class="drop drop-4"></div>
             <div class="drop drop-5"></div>
-            
+
         </div>
     </div>
 

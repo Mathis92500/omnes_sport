@@ -120,8 +120,6 @@ $result = mysqli_query($db_handle, $sql);
     echo $identif;
     echo $data['nom'] ;
 
-                                        //$image = $data['photomedecin'];
-                                        //echo  "<img src='$image' height='300' width='250'>" ;
                                     } ?> 
     }
     var clicked_id;
