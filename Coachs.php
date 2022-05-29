@@ -37,34 +37,10 @@ $_SESSION["nomMedecin"] = $nom;
       <div class="dropbtn">Actvités Sportives</div>
       <!--  Main Dropdown -->
       <div class="dropdown-one">
-        <div id="link1" class="dItem">Musculation
-          <!--  Inside Dropdown -->
-          <div class="dropdown-two">
-            <a name="DUMAIS" href="musculation.php" value="1" class="dItem" onclick="affiche_coach()">Coach 1</a>
-            <a name="Identifiant" href="fitness.php" value="2" class="dItem" onClick="reply_click(this.value)">Coach 2</a>
-          </div>
-        </div>
-        <div id="link1" class="dItem">Fitness
-          <!--  Inside Dropdown -->
-          <div class="dropdown-two">
-            <a name="Identifiant" value="3" class="dItem" onClick="reply_click(this.id)">Coach 3</a>
-            <a name="Identifiant" value="4" class="dItem" onClick="reply_click(this.id)">Coach 4</a>
-          </div>
-        </div>
-        <div id="link1" class="dItem">Biking
-          <!--  Inside Dropdown -->
-          <div class="dropdown-two">
-            <a name="Identifiant" value="5" class="dItem" onClick="reply_click(this.id)">Coach 5</a>
-            <a name="Identifiant" value="6" class="dItem" onClick="reply_click(this.id)">Coach 6</a>
-          </div>
-        </div>
-        <div id="link1" class="dItem">Cardio-Training
-          <!--  Inside Dropdown -->
-          <div class="dropdown-two">
-            <a name="Identifiant" value="7" class="dItem" onClick="reply_click(this.id)">Coach 7</a>
-            <a name="Identifiant" value="8" class="dItem" onClick="reply_click(this.id)">Coach 8</a>
-          </div>
-        </div>
+        <a id="link1" href="musculation.php" class="dItem">Musculation</a>
+        <a id="link1" href="fitness.php" class="dItem">Fitness</a>
+        <a id="link1" class="dItem">Biking</a>
+        <a id="link1" class="dItem">Cardio-Training</a>
       </div>
     </div>
 

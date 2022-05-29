@@ -1,6 +1,6 @@
 <?php
 session_start();
-$database = "omnes_sports";
+$database = "omnes sport";
 //connectez-vous dans votre BDD
 //Rappel : votre serveur = localhost | votre login = root | votre mot de pass = '' (rien)
 $db_handle = mysqli_connect('localhost', 'root', '' );
