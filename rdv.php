@@ -264,6 +264,7 @@
 
                 <!--Textbox pour le nom et prenom -->
         <form method="post" action="rdv_traitement.php">
+        
         <tr>
         <td>Jour :</td>
         <td><input type="text" id="12" name="jour"></td>
@@ -271,7 +272,15 @@
         <tr>
         <td>Heure:</td>
         <td><input type="text" id="13" name="heure"> </td>
-        </tr>
+        <td>Nom coach:</td>
+        <?php
+        $nom= isset($_POST["nom"])? $_POST["nom"] : "";
+        $prenom= isset($_POST["prenom"])? $_POST["prenom"] : "";
+        echo "<td>"."<input type='text' name='nom' value='$nom'>"." </td>";
+        echo "<td>Prenom coach:</td>";
+       echo " <td>"."<input type='text' name='prenom' value='$prenom'>"." </td>";
+        echo "</tr>"
+        ?>
             <!--Type date pour choissir son anniversaire  -->
         
         <td>

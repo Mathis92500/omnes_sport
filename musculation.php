@@ -47,6 +47,7 @@ if ($db_found) {
     echo "<th>" . "Téléphone" . "</th>";
     echo "<th>" . "Sport" . "</th>";
     echo "<th>" . "Mail" . "</th>";
+    echo "<th>" . "Choix" . "</th>";
     echo "</tr>";
     $a=1;
     while ($data = mysqli_fetch_assoc($result)) {
@@ -54,6 +55,7 @@ if ($db_found) {
         $c="$a";
         $b="C:\wamp64\www\omnes_sport\photos_coachs\m".$c.".jpg";
         
+        $z=$data['nom']."_".$data['prenom'];
         echo "<tr>";
         echo "<td>" . "<img src='$b' height='200' width='200'/>" . "</td>";
         echo "<td>" . $data['nom'] . "</td>";
@@ -62,6 +64,7 @@ if ($db_found) {
         echo "<td>" . $data['telephone'] . "</td>";
         echo "<td>" . $data['sport'] . "</td>";
         echo "<td>" . $data['mail'] . "</td>";
+        echo "<td>" . "<input type='button' id='$z' onclick='reply_onclick(this.id)' value='Choisir ce coach'>" ."</td>";
         echo "</tr>";
         echo "<tr>";
         $a=$a+1;
@@ -70,7 +73,47 @@ if ($db_found) {
 echo "</table>";
 
 }
+
+
+
+
 ?>
+<form method="post" action="rdv.php">
+        <tr>
+        <td>Nom Coach :</td>
+        <td><input type="text" id="12" name="nom"></td>
+        </tr>
+        <tr>
+        <td>Prenom Coach:</td>
+        <td><input type="text" id="13" name="prenom"> </td>
+        </tr>
+            <!--Type date pour choissir son anniversaire  -->
+        
+        <td>
+        <td colspan="2" align="center">
+     <!--Bouton pour valider le formulaire  -->
+<input type="submit" name="button1" value="Prendre RDV avec ce coach">
+</td>
+</form>
+
+
+<script type="text/javascript">
+
+function reply_onclick(clicked_id) {
+    
+    a=clicked_id.split('_');
+    var Myelement = document.getElementById("12");
+   
+    Myelement.value = a[0];
+    console.log(Myelement.value);
+
+    var Myelement = document.getElementById("13");
+    Myelement.value = a[1];
+    console.log(Myelement.value);
+    
+}
+
+</script>
 
 <footer>
 
