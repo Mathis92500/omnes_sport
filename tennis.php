@@ -35,7 +35,7 @@ $db_found = mysqli_select_db($db_handle, $database);
 
 if ($db_found) {
 
-    $sql = "SELECT * FROM coachs WHERE sport='Tennis'";
+    $sql = "SELECT * FROM coachs WHERE sport='Tennis Competitif'";
     $result = mysqli_query($db_handle, $sql);
     
     echo "<table border=\"1\">";
@@ -48,7 +48,7 @@ if ($db_found) {
     echo "<th>" . "Sport" . "</th>";
     echo "<th>" . "Mail" . "</th>";
     echo "</tr>";
-    $a=1;
+    $a=17;
     while ($data = mysqli_fetch_assoc($result)) {
         
         $c="$a";

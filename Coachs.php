@@ -39,8 +39,10 @@ $_SESSION["nomMedecin"] = $nom;
       <div class="dropdown-one">
         <a id="link1" href="musculation.php" class="dItem">Musculation</a>
         <a id="link1" href="fitness.php" class="dItem">Fitness</a>
-        <a id="link1" class="dItem">Biking</a>
-        <a id="link1" class="dItem">Cardio-Training</a>
+        <a id="link1" href="biking.php"class="dItem">Biking</a>
+        <a id="link1" href="cardio_training.php"class="dItem">Cardio-Training</a>
+        <a id="link1" href="cours_collectif.php"class="dItem">Cours Collectif</a>
+
       </div>
     </div>
 
@@ -52,30 +54,14 @@ $_SESSION["nomMedecin"] = $nom;
         <a id="link1" href="football.php" class="dItem">Football</a>
         <a id="link1" href="rugby.php"class="dItem">Rugby</a>
         <a id="link1" href="tennis.php"class="dItem">Tennis</a>
+        <a id="link1" href="plongeon.php"class="dItem">Plongeon</a>
+        <a id="link1" href="natation.php"class="dItem">Natation</a>
+
       </div>
     </div>
     <input type="text" placeholder="Search..">
   </div>
 
-
-  <caroussel>
-        <div class="container">
-            <input type="radio" name="slider" id="item-1" checked>
-            <input type="radio" name="slider" id="item-2">
-            <input type="radio" name="slider" id="item-3">
-            <div class="cards">
-                <label class="card" for="item-1" id="Picture-1">
-                    <img src="PSG.jpg" alt="Picture">
-                </label>
-                <label class="card" for="item-2" id="Picture-2">
-                    <img src="Rolland Garros.jpg" alt="Picture">
-                </label>
-                <label class="card" for="item-3" id="Picture-3">
-                    <img src="F1.jpg">
-                </label>
-            </div>
-        </div>
-    </caroussel>
 
   <script type="text/javascript">
     function affiche_coach(){
