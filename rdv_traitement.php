@@ -15,7 +15,7 @@ if (isset($_POST["button1"])) {
     $heure= isset($_POST["heure"])? $_POST["heure"] : "";
     $nom= isset($_POST["nom"])? $_POST["nom"] : "";
     $prenom= isset($_POST["prenom"])? $_POST["prenom"] : "";
-    
+    echo $nom,$prenom,$jour,$heure;
 
     $sql = "SELECT * FROM rdv WHERE id_coach='$nom'";
     $result = mysqli_query($db_handle, $sql);
@@ -25,13 +25,11 @@ if (isset($_POST["button1"])) {
             echo "Le coach à déjà un rdv sur ce créneau ! Veuillez en choisir un autre !";
             $foo=false;
         }
-        else{
-            $sql = "INSERT INTO `rdv`(`id_coach`, `id_client`, `jour`, `heure`) VALUES ('$nom','aaa','$jour','$heure')";
-            
-        }
     }
     if($foo==true)
     {
+    $sql = "INSERT INTO `rdv`(`id_coach`,`id_client`, `jour`, `heure`) VALUES ('$nom','0','$jour','$heure')";
+    $result = mysqli_query($db_handle, $sql);
     echo "RDV ok ! Vous pouvez consulter vos rdv dans la page Rendez-Vous";
     }
 
