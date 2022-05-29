@@ -17,7 +17,7 @@ session_start();
                     $_SESSION['nom_client'] = $data['nom'];
 
                     }
-                    header('Location: Compte.php');
+                    header('Location: Accueil.html');
                    
                 } 
             }

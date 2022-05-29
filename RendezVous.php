@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Omnes Sport </title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="Compte.css">
+    <link rel="stylesheet" href="RendezVous.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
@@ -24,14 +24,7 @@
 
     <div class="navbar">
         <a href="Accueil.html">Omnes Sport</a>
-        <div class="dropdown">
-            <div class="dropbtn">Actvités Sportives</div>
-            <!--  Main Dropdown -->
-            <div class="dropdown-one">
-                <a id="1" class="dItem" onClick="reply_click(this.id)">Coach 1</a>
-                <a id="2" class="dItem" onClick="reply_click(this.id)">Coach 2</a>
-            </div>
-        </div>
+        
         <input type="text" placeholder="Search..">
     </div>
 
@@ -60,4 +53,47 @@
         <p id="contact">Contact : 08 19 17 278 1 | &copy; 2021, Burgure.</p>
     </footer>
 
+
+
+
+    
+</body>
 </html>
+
+<?php
+session_start();
+$nom_client=$_SESSION['nom_client'];
+
+$database = "omnes sport";
+//connectez-vous dans votre BDD
+//Rappel : votre serveur = localhost | votre login = root | votre mot de pass = '' (rien)
+$db_handle = mysqli_connect('localhost', 'root', '' );
+$db_found = mysqli_select_db($db_handle, $database);
+ //si le BDD existe, faire le traitement
+
+if ($db_found) {
+
+    $sql = "SELECT * FROM rdv WHERE id_client='$nom_client'";
+    $result = mysqli_query($db_handle, $sql);
+
+    echo "<table border=\"1\">";
+    echo "<tr>";
+    echo "<th>" . "Nom coach" . "</th>";
+    echo "<th>" . "Jour" . "</th>";
+    echo "<th>" . "Heure" . "</th>";
+
+    echo "</tr>";
+
+    while ($data = mysqli_fetch_assoc($result)) {
+        echo "<tr>";
+        echo "<td>" . $data['id_coach'] . "</td>";
+        echo "<td>" . $data['jour'] . "</td>";
+        echo "<td>" . $data['heure'] . "</td>";
+
+        echo "</tr>";
+    }
+
+
+
+}
+?>

@@ -36,8 +36,8 @@ $_SESSION["mdp"] = "";
     <div class="navbar">
         <a href="Accueil.html">Omnes Sport</a>
         <a href="Coachs.php">Tout Parcourir</a>
-        <a href="RendezVous.html"> Rendez-Vous</a>
-        <a href="Compte.html">Votre Compte</a>
+        <a href="RendezVous.php"> Rendez-Vous</a>
+        <a href="Compte.php">Votre Compte</a>
         <form method="post" action="recherche.php">
             <input type="text" name="recherche" id="recherche" placeholder="Search..">
         </form>
@@ -52,7 +52,7 @@ $_SESSION["mdp"] = "";
                 <h2>Se connecter </h2>
                 <br>
                 <input id="truc" type="mail" name="mail" placeholder="Email"><br>
-                <input id="truc" type="mdp" name="mdp" placeholder="Mot de passe"><br>
+                <input id="truc" type="password" name="mdp" placeholder="Mot de passe"><br>
                 
                 <input id="truc" type="submit" name="Connexion" value="Connexion"><br>
                 <br>
@@ -60,6 +60,10 @@ $_SESSION["mdp"] = "";
                 <a id="truc" href="CreaCompteCoach.html">Créer votre compte coach</a>
                 <br></br>
                 <br></br>
+                <a id="truc" href='loginadmin.php'><span>Déconnexion</span></a>
+                <br></br>
+                <br></br>
+                <a id="truc" href='Deconnexion.php'><span>Login admin</span></a>
                 <a id="truc" href="CreaCompteEmployee.html">Créer votre compte administrateur</a>
 
             </form>

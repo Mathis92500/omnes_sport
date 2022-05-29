@@ -8,69 +8,43 @@ $_SESSION["nomMedecin"] = $nom;
 */
 ?>
 
+
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site Omnes Sport </title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="Coachs1.css">
+
 </head>
 
 <body>
+
   <div class="navbar">
     <a href="Accueil.html">Omnes Sport</a>
     <form method="post" action="recherche.php">
             <input type="text" name="recherche" id="recherche" placeholder="Search..">
-        </form>  </div>
+    </form>
+  </div>
 
-<?php
-$database = "omnes sport";
-
-$recherche = isset($_POST["recherche"]) ? $_POST["recherche"] : "";
-
-
-
-$db_handle = mysqli_connect('localhost', 'root', '' );
-$db_found = mysqli_select_db($db_handle, $database);
-
-if ($db_found) {
-
-    $sql = "SELECT * FROM coachs WHERE nom='$recherche' or prenom='$recherche' or sport='$recherche'";
-    $result = mysqli_query($db_handle, $sql);
+  <img src="C:\Users\mathi\Desktop\ING3\WEBDYNAMIQUE\PROJET\photos_coachs\Salle.jpg">
+  <h1>SALLE OMNES SPORT
+</h1>
+<h2>Salle: G-001</h2>
+<h2>Téléphone: +33 01 22 33 44 55</h2>
+<h2>Email:salle.sport@omnessports.fr</h2><br></br>
+<h1>NOS SERVICES</h1><br></br>
+<ul>
+    <li><h2>Personnels de la salle de sport </h2></li>
+    <li><h2>Horaire de la gym</h2> </li>
+    <li><h2>Règles sur l’utilisation des machines </h2> </li>
+    <li><h2>Nouveaux clients</h2></li>
+    <li><h2>Alimentation et nutrition</h2></li>
+    <li><h2>Gynécologie</h2></li>
     
-    echo "<table border=\"1\">";
-    echo "<tr>";
-    echo "<th>" . "Photo" . "</th>";
-    echo "<th>" . "Nom" . "</th>";
-    echo "<th>" . "Prénom" . "</th>";
-    echo "<th>" . "Bureau" . "</th>";
-    echo "<th>" . "Téléphone" . "</th>";
-    echo "<th>" . "Sport" . "</th>";
-    echo "<th>" . "Mail" . "</th>";
-    echo "</tr>";
-    $a=19;
-    while ($data = mysqli_fetch_assoc($result)) {
-        
-        $c="$a";
-        $b="C:\wamp64\www\omnes_sport\photos_coachs\m".$c.".jpg";
-        
-        echo "<tr>";
-        echo "<td>" . "<img src='$b' height='200' width='200'/>" . "</td>";
-        echo "<td>" . $data['nom'] . "</td>";
-        echo "<td>" . $data['prenom'] . "</td>";
-        echo "<td>" . $data['bureau'] . "</td>";
-        echo "<td>" . $data['telephone'] . "</td>";
-        echo "<td>" . $data['sport'] . "</td>";
-        echo "<td>" . $data['mail'] . "</td>";
-        echo "</tr>";
-        echo "<tr>";
-        $a=$a+1;
+    </ul>
 
-    }
-echo "</table>";
-
-}
-?>
 
 <footer>
         <div class="machin">
