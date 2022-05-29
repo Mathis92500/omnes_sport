@@ -15,7 +15,7 @@ $_SESSION["nomMedecin"] = $nom;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site Omnes Sport </title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="Coachs.css">
+  <link rel="stylesheet" href="Coachs1.css">
 
 </head>
 
