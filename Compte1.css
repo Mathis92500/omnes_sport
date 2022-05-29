@@ -149,19 +149,16 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
+  background: linear-gradient(45deg, #d76603, #fafbff);
 }
 
 
-* {
-    margin: 0;
-    padding: 0;
-    outline: none; 
-}
 
 .conta {
-    background: linear-gradient(45deg, #d76603, #fafbff);
-    height: 720px;
-    width: 100%;
+    margin-top: 25px;
+    margin-left: 700px;
+    height: 570px;
+    width: 550px;
     font-family: arial, sans-serif;
     display: flex;
     align-items: center;
@@ -172,10 +169,11 @@ html, body {
     position: relative;
   }
 
-  form {
+  .login{
     background: rgba(255, 255, 255, .3);
-    padding: 3rem;
-    height: 420px;
+    height: 570px;
+    width: 550px;
+
     border-radius: 20px;
     border-left: 1px solid rgba(255, 255, 255, .3);
     border-top: 1px solid rgba(255, 255, 255, .3);
@@ -185,26 +183,20 @@ html, body {
     box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
     text-align: center;
   }
-  p {
-    color: rgb(133, 0, 0);
-    font-weight: 500;
-    opacity: .7;
-    font-size: 1.4rem;
-    margin-bottom: 60px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-  }
+
     
-  a {
+  #wesh  {
     text-decoration: none;
-    color: #ddd;
+    color: rgb(0, 0, 0);
     font-size: 12px;
+    z-index: 100;
   }
   
-  a:hover {
+  #wesh:hover {
     text-shadow: 2px 2px 6px #00000040;
   }
   
-  a:active {
+  #wesh:active {
     text-shadow: none;
   }
 
@@ -227,21 +219,22 @@ html, body {
     margin-bottom: 2em;
   }  
   #truc:hover,
-#truc[type="text"]:focus,
-#truc[type="text"]:focus{
+#truc:focus,
+#truc:focus{
   background: rgba(255,255,255,0.1);
   box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
 }
     
-#truc[type="button"] {
+#truc {
   margin-top: 10px;
   width: 150px;
   font-size: 1rem;
   cursor: pointer;
 }
 
+
 ::placeholder {
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 .drop {

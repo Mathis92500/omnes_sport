@@ -250,6 +250,13 @@ footer #contact {
     margin-bottom: -10px;
 }
 
+footer.col-sm-4{
+  float: left;
+}
+footer.col-sm-8{
+  float: left;
+}
+
 @media screen and (max-width:680px) {
     nav .onglets {
         margin-left: 0px;
