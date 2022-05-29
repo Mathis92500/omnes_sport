@@ -48,38 +48,34 @@ $_SESSION["nomMedecin"] = $nom;
       <div class="dropbtn">Sports de Compétition</div>
       <!--  Main Dropdown -->
       <div class="dropdown-one">
-        <div id="link1" class="dItem">Basketball
-          <!--  Inside Dropdown -->
-          <div class="dropdown-two">
-            <div class="dItem" id="file">Coach 1</div>
-            <div class="dItem" id="file">Coach 2</div>
-          </div>
-        </div>
-        <div id="link1" class="dItem">Football
-          <!--  Inside Dropdown -->
-          <div class="dropdown-two">
-            <div class="dItem" id="">Coach 1</div>
-            <div class="dItem" id="file" file>Coach 5</div>
-          </div>
-        </div>
-        <div id="link1" class="dItem">Rugby
-          <!--  Inside Dropdown -->
-          <div class="dropdown-two">
-            <div class="dItem" id="file">Coach 1</div>
-            <div class="dItem" id="file">Coach 4</div>
-          </div>
-        </div>
-        <div id="link1" class="dItem">Tennis
-          <!--  Inside Dropdown -->
-          <div class="dropdown-two">
-            <div class="dItem" id="file">Coach 1</div>
-            <div class="dItem" id="file">Coach 3</div>
-          </div>
-        </div>
+        <a id="link1" href="basketball.php" class="dItem">Basketball</a>
+        <a id="link1" href="football.php" class="dItem">Football</a>
+        <a id="link1" href="rugby.php"class="dItem">Rugby</a>
+        <a id="link1" href="tennis.php"class="dItem">Tennis</a>
       </div>
     </div>
     <input type="text" placeholder="Search..">
   </div>
+
+
+  <caroussel>
+        <div class="container">
+            <input type="radio" name="slider" id="item-1" checked>
+            <input type="radio" name="slider" id="item-2">
+            <input type="radio" name="slider" id="item-3">
+            <div class="cards">
+                <label class="card" for="item-1" id="Picture-1">
+                    <img src="PSG.jpg" alt="Picture">
+                </label>
+                <label class="card" for="item-2" id="Picture-2">
+                    <img src="Rolland Garros.jpg" alt="Picture">
+                </label>
+                <label class="card" for="item-3" id="Picture-3">
+                    <img src="F1.jpg">
+                </label>
+            </div>
+        </div>
+    </caroussel>
 
   <script type="text/javascript">
     function affiche_coach(){
