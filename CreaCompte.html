@@ -6,7 +6,6 @@
     <title>Site Omnes Sport </title>
     <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 
@@ -33,12 +32,13 @@
     <div class="creacompte">
         <form method="post" action="CreaCompte.php">
             <link rel="stylesheet" href="CreaCompte.css">
+            <div class="login">
             <h1>Créer un compte </h1>
             <h1></h1>
 
             <h2>Vos coordonnées</h2> <!-- Titre du fieldset -->
 
-            <div class="col-sm-4"></div>
+            <div class="col2"></div>
             <label for="nom">Nom *:</label>
             <input class="Client" type="text" name="nom" id="nom" required />
             <br>
@@ -49,30 +49,33 @@
             <label for="adresse_ligne_1">Adresse Ligne 1 *: </label>
             <input class="Client" type="text" name="adresse_ligne_1" id="adresse_ligne_1" required />
             <br>
-            <label for="AdresseLigne2">Adresse Ligne 2 :</label>
+            <label for="adresse_ligne_2">Adresse Ligne 2 :</label>
             <input class="Client" type="text" name="adresse_ligne_2" id="adresse_ligne_2" />
             <br>
-            <label for="Ville">Ville *:</label>
+            <label for="ville">Ville *:</label>
             <input class="Client" type="text" name="ville" id="ville" />
             <br>
-    </div>
 
-    <div class="col-sm-8"></div>
-    <label for="CodePostal">Code Postal *:</label>
-    <input class="Client" type="text" name="code_postal" id="code_postal" />
-    <br>
-    <label for="NumeroTel">Numero de Téléphone *:</label>
-    <input class="Client" type="text" name="numero" id="numero" />
-    <br>
-    <label for="Pays">Pays *:</label>
-    <input class="Client" type="text" name="pays" id="ays" />
-    <br>
-    <label for="Mail">Mail *:</label>
-    <input class="Client" type="text" name="mail" id="mail" required />
-    <br>
-    <label for="MDP">Mot de passe *:</label>
-    <input class="Client" type="password" name="mdp" id="mdp" required />
-    <br>
+
+            <div class="col2"></div>
+            <label for="code_postal">Code Postal *:</label>
+            <input class="Client" type="text" name="code_postal" id="code_postal" />
+            <br>
+            <label for="numero">Numero de Téléphone *:</label>
+            <input class="Client" type="text" name="numero" id="numero" />
+            <br>
+            <label for="pays">Pays *:</label>
+            <input class="Client" type="text" name="pays" id="ays" />
+            <br>
+            <label for="mail">Mail *:</label>
+            <input class="Client" type="text" name="mail" id="mail" required />
+            <br>
+            <label for="mdp">Mot de passe *:</label>
+            <input class="Client" type="password" name="mdp" id="mdp" required />
+            <br>
+            <input type="submit" name="button2" value="Créer votre compte">
+            </div>
+
     </div>
 
 
@@ -92,34 +95,43 @@
                     <label for="precisions">Si "Autre", veuillez préciser :</label>
                     <textarea name="precisions" id="precisions" cols="40" rows="4"></textarea>
                 </p>-->
-    <input type="submit" name="button2" value="Créer votre compte">
     </div>
 
     </div>
 
-    <!--<footer>
+    <footer>
+        <div class="machin">
+            <div class="col-sm-4">
 
-        <h2>Nos services</h2>
-        <div class="services">
+                <h2>Nos services</h2>
+                <div class="services">
 
-            <div class="service">
-                <h4>Salle de sport</h4>
-                <p>L.</p>
+                    <div class="service">
+                        <h4>Salle de sport</h4>
+                        <p>Nos salles de sports sont très belles et extrèmement bien équipée.</p>
+                    </div>
+
+                    <div class="service">
+                        <h4>Rendez-Vous</h4>
+                        <p>Prenez rendez-vous avec l'un de nos nombreux coachs de renom.</p>
+                    </div>
+
+                    <div class="service">
+                        <h4>Satisfait ou remboursé</h4>
+                        <p>Essayez nos services pendants 30 jours.</p>
+                    </div>
+
+                </div>
+                <p id="contact">Contact : 08 19 17 278 1 | &copy; 2022, Omnes Sport.</p>
+                <br></br>
             </div>
 
-            <div class="service">
-                <h4>Consultations</h4>
-                <p>L.</p>
+            <div class="col-sm-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84020.35679770722!2d2.1404457092285276!3d48.846078571874976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671a7ae7c6039%3A0xfcf852a8ee294df7!2sBasic-Fit%20Paris%20Avenue%20Emile%20Zola!5e0!3m2!1sfr!2sfr!4v1653663327892!5m2!1sfr!2sfr" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <div class="service">
-                <h4>Aimé ou remboursé</h4>
-                <p>L.</p>
-            </div>
-
+            
         </div>
-
-        <p id="contact">Contact : 08 19 17 278 1 | &copy; 2021, Burgure.</p>
-    </footer>-->
+    </footer>
 
 </html>

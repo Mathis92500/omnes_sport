@@ -112,29 +112,39 @@ function reply_onclick(clicked_id) {
 }
 </script>
 <footer>
+        <div class="machin">
+            <div class="col-sm-4">
 
-    <h1>Nos services</h1>
-    <div class="services">
+                <h2>Nos services</h2>
+                <div class="services">
 
-      <div class="service">
-        <h3>Salle de sport</h3>
-        <p>L.</p>
-      </div>
+                    <div class="service">
+                        <h4>Salle de sport</h4>
+                        <p>Nos salles de sports sont très belles et extrèmement bien équipée.</p>
+                    </div>
 
-      <div class="service">
-        <h3>Consultations</h3>
-        <p>L.</p>
-      </div>
+                    <div class="service">
+                        <h4>Rendez-Vous</h4>
+                        <p>Prenez rendez-vous avec l'un de nos nombreux coachs de renom.</p>
+                    </div>
 
-      <div class="service">
-        <h3>Aimé ou remboursé</h3>
-        <p>L.</p>
-      </div>
+                    <div class="service">
+                        <h4>Satisfait ou remboursé</h4>
+                        <p>Essayez nos services pendants 30 jours.</p>
+                    </div>
 
-    </div>
+                </div>
+                <p id="contact">Contact : 08 19 17 278 1 | &copy; 2022, Omnes Sport.</p>
+                <br></br>
+            </div>
 
-    <p id="contact">Contact : 08 19 17 278 1 | &copy; 2021, Burgure.</p>
-  </footer>
+            <div class="col-sm-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84020.35679770722!2d2.1404457092285276!3d48.846078571874976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671a7ae7c6039%3A0xfcf852a8ee294df7!2sBasic-Fit%20Paris%20Avenue%20Emile%20Zola!5e0!3m2!1sfr!2sfr!4v1653663327892!5m2!1sfr!2sfr" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            
+        </div>
+    </footer>
 </body>
 
 </html>

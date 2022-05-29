@@ -1,47 +1,141 @@
-<form method="post" action="CreaCompteEmployee.php">
+
+
+ <html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Omnes Sport </title>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="CreaCompteCoach.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        function reply_click(clicked_id) {
+            //alert(clicked_id);
+            //console.log(clicked_id);
+        }
+        function getIdentifiant(clicked_id) { }
+    </script>
+
+    <div class="navbar">
+        <a href="Accueil.html">Omnes Sport</a>
+        <a href="Coachs.php">Tout Parcourir</a>
+        <a href="RendezVous.html"> Rendez-Vous</a>
+        <a href="Comte.php"> Votre Compte</a>
+        <form method="post" action="recherche.php">
+            <input type="text" name="recherche" id="recherche" placeholder="Search..">
+        </form>
+    </div>
+
+    <div class="creacompte">
+        <form method="post" action="CreaCompteEmployee.php">
  
-    <h1>Créer un compte coach </h1>
-        <legend>Vos coordonnées pour devenir coach </legend> <!-- Titre du fieldset --> 
- 
-        <label for="nom">Nom *:</label>
-        <input type="text" name="nom" id="nom" required  />
-        <br>
- 
-        <label for="prenom">Prenom *: </label>
-        <input type="text" name="prenom" id="prenom"  required />
-        <br>
+            <h1>Créer un compte coach </h1>
+                <legend>Vos coordonnées pour devenir coach </legend> <!-- Titre du fieldset --> 
+         
+                <label for="nom">Nom *:</label>
+                <input class="Client" type="text" name="nom" id="nom" required  />
+                <br>
+         
+                <label for="prenom">Prenom *: </label>
+                <input class="Client"type="text" name="prenom" id="prenom"  required />
+                <br>
+        
+                <!--<label for="Video">Video *: </label>
+                <input type="text" name="Video" id="Video"  required />
+                <br>
+        
+                <label for="Photo">Photo *: </label>
+                <input type="text" name="Photo" id="Photo"  required />
+                <br>
+        
+                <label for="CV">CV *: </label>
+                <input type="text" name="CV" id="CV"  required />
+                <br>-->
+        
+                <label for="sport">Sport *:</label>
+                <input class="Client"type="text" name="sport" id="sport" />
+                <br>
+                <label for="code_postal">Code Postal *:</label>
+                <input class="Client"type="text" name="code_postal" id="code_postal" />
+                <br>
+                <label for="numero">Numero de Téléphone *:</label>
+                <input class="Client"type="tel" name="numero" id="numero" />
+                <br>
+                <label for="mail">Mail *:</label>
+                <input class="Client"type="text" name="mail" id="mail" required />
+                <br>
+                <label for="mdp">Mot de passe *:</label>
+                <input class="Client"type="password" name="mdp" id="mdp" required  />
+                <br>
+                <label for="bureau">Bureau *:</label>
+                <input class="Client"type="text" name="bureau" id="bureau" required  />
+                <br>
+        
+            <input type="submit" value="Creer" />
+        
+         </form>
+    </div>
 
-        <!--<label for="Video">Video *: </label>
-        <input type="text" name="Video" id="Video"  required />
-        <br>
 
-        <label for="Photo">Photo *: </label>
-        <input type="text" name="Photo" id="Photo"  required />
-        <br>
 
-        <label for="CV">CV *: </label>
-        <input type="text" name="CV" id="CV"  required />
-        <br>-->
+    <!-- <h2>Carte Etudiant </h2>  Titre du fieldset 
 
-        <label for="sport">Sport *:</label>
-        <input type="text" name="sport" id="sport" />
-        <br>
-        <label for="code_postal">Code Postal *:</label>
-        <input type="text" name="code_postal" id="code_postal" />
-        <br>
-        <label for="numero">Numero de Téléphone *:</label>
-        <input type="tel" name="numero" id="numero" />
-        <br>
-        <label for="mail">Mail *:</label>
-        <input type="text" name="mail" id="mail" required />
-        <br>
-        <label for="mdp">Mot de passe *:</label>
-        <input type="password" name="mdp" id="mdp" required  />
-        <br>
-        <label for="bureau">Bureau *:</label>
-        <input type="text" name="bureau" id="bureau" required  />
-        <br>
+                <p>
+                    Avez vous une carte d'Etudiant :
 
-    <input type="submit" value="Creer" />
+                    <input class="Client" type="radio" name="souhait" value="oui" id="oui" /> <label
+                        for="oui">oui</label>
+                    <input class="Client" type="radio" name="souhait" value="non" id="non" /> <label
+                        for="non">non</label>
 
- </form>
+
+                <p>
+                    <label for="precisions">Si "Autre", veuillez préciser :</label>
+                    <textarea name="precisions" id="precisions" cols="40" rows="4"></textarea>
+                </p>-->
+    </div>
+
+    </div>
+
+    <footer>
+        <div class="machin">
+            <div class="col-sm-4">
+
+                <h2>Nos services</h2>
+                <div class="services">
+
+                    <div class="service">
+                        <h4>Salle de sport</h4>
+                        <p>Nos salles de sports sont très belles et extrèmement bien équipée.</p>
+                    </div>
+
+                    <div class="service">
+                        <h4>Rendez-Vous</h4>
+                        <p>Prenez rendez-vous avec l'un de nos nombreux coachs de renom.</p>
+                    </div>
+
+                    <div class="service">
+                        <h4>Satisfait ou remboursé</h4>
+                        <p>Essayez nos services pendants 30 jours.</p>
+                    </div>
+
+                </div>
+                <p id="contact">Contact : 08 19 17 278 1 | &copy; 2022, Omnes Sport.</p>
+                <br></br>
+            </div>
+
+            <div class="col-sm-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84020.35679770722!2d2.1404457092285276!3d48.846078571874976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671a7ae7c6039%3A0xfcf852a8ee294df7!2sBasic-Fit%20Paris%20Avenue%20Emile%20Zola!5e0!3m2!1sfr!2sfr!4v1653663327892!5m2!1sfr!2sfr" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            
+        </div>
+    </footer>
+
+</html>
