@@ -10,9 +10,8 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Omnes Sport </title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="Compte.css">
+    <link rel="stylesheet" href="Compte1.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
 </head>
@@ -48,6 +47,7 @@ $_SESSION["mdp"] = "";
         <div class="container">
             <link rel="stylesheet" href="2.css">
             <form action="principale.php" method="POST">
+            <form class="login">
                 <h2>OmnesSport</h2>
                 <h2>Se connecter </h2>
                 <br>
@@ -56,22 +56,25 @@ $_SESSION["mdp"] = "";
                 
                 <input id="truc" type="submit" name="Connexion" value="Connexion"><br>
                 <br>
-                <a href="CreaCompte.html">Créer votre compte client</a>
-                <a href="CreaCompteCoach.html">Créer votre compte coach</a>
-                <a href="CreaCompteEmployee.html">Créer votre compte administrateur</a>
+                <a id="truc" href="CreaCompte.html">Créer votre compte client</a>
+                <a id="truc" href="CreaCompteCoach.html">Créer votre compte coach</a>
+                <br></br>
+                <br></br>
+                <a id="truc" href="CreaCompteEmployee.html">Créer votre compte administrateur</a>
 
+            </form>
             </form>
 
             
             
             
 
-
+<!--
             <div class="drop drop-1"></div>
             <div class="drop drop-2"></div>
             <div class="drop drop-3"></div>
             <div class="drop drop-4"></div>
-            <div class="drop drop-5"></div>
+            <div class="drop drop-5"></div>-->
 
         </div>
     </div>
