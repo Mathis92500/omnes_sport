@@ -98,7 +98,7 @@ $_SESSION["nomMedecin"] = $nom;
 
 
 <?php
-$database = "omnes_sports";
+$database = "omnes sport";
 
 
 $db_handle = mysqli_connect('localhost', 'root', '' );
@@ -119,7 +119,7 @@ if ($db_found) {
     echo "<th>" . "Sport" . "</th>";
     echo "<th>" . "Mail" . "</th>";
     echo "</tr>";
-    $a=1;
+    $a=3;
     while ($data = mysqli_fetch_assoc($result)) {
         
         $c="$a";
