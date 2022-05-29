@@ -158,11 +158,6 @@ html, body {
     outline: none; 
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    outline: none; 
-}
 
 .creacompte {
     background: linear-gradient(45deg, #d76603, #fafbff);

@@ -166,10 +166,11 @@ html, body {
 
 .container {
   width: 100%;
-  max-width: 800px;
-  max-height: 600px;
+  max-width: 700px;
+  max-height: 500px;
   height: 100%;
   margin-left: 30%;
+  margin-bottom: 20px;
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
@@ -218,7 +219,7 @@ footer {
     background-color: #1b1b1b;
     color: #fff;
     padding: 30px 100px;
-    position: absolute;
+    position: bottom;
     bottom: 0;
     width: 100%;
 }

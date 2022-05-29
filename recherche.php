@@ -8,19 +8,15 @@ $_SESSION["nomMedecin"] = $nom;
 */
 ?>
 
-
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site Omnes Sport </title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="Coachs1.css">
-
 </head>
 
 <body>
-
   <div class="navbar">
     <a href="Accueil.html">Omnes Sport</a>
     <form method="post" action="recherche.php">
@@ -30,13 +26,16 @@ $_SESSION["nomMedecin"] = $nom;
 <?php
 $database = "omnes sport";
 
+$recherche = isset($_POST["recherche"]) ? $_POST["recherche"] : "";
+
+
 
 $db_handle = mysqli_connect('localhost', 'root', '' );
 $db_found = mysqli_select_db($db_handle, $database);
 
 if ($db_found) {
 
-    $sql = "SELECT * FROM coachs WHERE sport='Natation Competitif'";
+    $sql = "SELECT * FROM coachs WHERE nom='$recherche'";
     $result = mysqli_query($db_handle, $sql);
     
     echo "<table border=\"1\">";
@@ -48,16 +47,12 @@ if ($db_found) {
     echo "<th>" . "Téléphone" . "</th>";
     echo "<th>" . "Sport" . "</th>";
     echo "<th>" . "Mail" . "</th>";
-    echo "<th>" . "Choix" . "</th>";
-
     echo "</tr>";
     $a=19;
     while ($data = mysqli_fetch_assoc($result)) {
         
         $c="$a";
         $b="C:\wamp64\www\omnes_sport\photos_coachs\m".$c.".jpg";
-        $z=$data['nom']."_".$data['prenom'];
-
         
         echo "<tr>";
         echo "<td>" . "<img src='$b' height='200' width='200'/>" . "</td>";
@@ -67,8 +62,6 @@ if ($db_found) {
         echo "<td>" . $data['telephone'] . "</td>";
         echo "<td>" . $data['sport'] . "</td>";
         echo "<td>" . $data['mail'] . "</td>";
-        echo "<td>" . "<input type='button' id='$z' onclick='reply_onclick(this.id)' value='Choisir ce coach'>" ."</td>";
-
         echo "</tr>";
         echo "<tr>";
         $a=$a+1;
@@ -78,41 +71,7 @@ echo "</table>";
 
 }
 ?>
-<form method="post" action="rdv.php">
-        <tr>
-        <td>Nom Coach :</td>
-        <td><input type="text" id="12" name="nom"></td>
-        </tr>
-        <tr>
-        <td>Prenom Coach:</td>
-        <td><input type="text" id="13" name="prenom"> </td>
-        </tr>
-            <!--Type date pour choissir son anniversaire  -->
-        
-        <td>
-        <td colspan="2" align="center">
-     <!--Bouton pour valider le formulaire  -->
-<input type="submit" name="button1" value="Prendre RDV avec ce coach">
-</td>
-</form>
 
-
-<script type="text/javascript">
-
-function reply_onclick(clicked_id) {
-    
-    a=clicked_id.split('_');
-    var Myelement = document.getElementById("12");
-   
-    Myelement.value = a[0];
-    console.log(Myelement.value);
-
-    var Myelement = document.getElementById("13");
-    Myelement.value = a[1];
-    console.log(Myelement.value);
-    
-}
-</script>
 <footer>
         <div class="machin">
             <div class="col-sm-4">

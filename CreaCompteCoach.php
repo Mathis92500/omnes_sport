@@ -27,8 +27,9 @@
         <a href="Coachs.php">Tout Parcourir</a>
         <a href="RendezVous.html"> Rendez-Vous</a>
         <a href="Comte.php"> Votre Compte</a>
-        <input type="text" placeholder="Search..">
-
+        <form method="post" action="recherche.php">
+            <input type="text" name="recherche" id="recherche" placeholder="Search..">
+        </form>
     </div>
 
 
@@ -79,29 +80,34 @@
 
         <a href="Accueil.html">Retour à l'acceuil</a>
 
-    <footer>
+        <footer>
+        <div class="machin">
+            <div class="col-sm-4">
 
-        <h2>Nos services</h2>
-        <div class="services">
+                <h2>Nos services</h2>
+                <div class="services">
 
-            <div class="service">
-                <h4>Salle de sport</h4>
-                <p>L.</p>
+                    <div class="service">
+                        <h4>Salle de sport</h4>
+                        <p>Nos salles de sports sont très belles et extrèmement bien équipée.</p>
+                    </div>
+
+                    <div class="service">
+                        <h4>Rendez-Vous</h4>
+                        <p>Prenez rendez-vous avec l'un de nos nombreux coachs de renom.</p>
+                    </div>
+
+                    <div class="service">
+                        <h4>Satisfait ou remboursé</h4>
+                        <p>Essayez nos services pendants 30 jours.</p>
+                    </div>
+
+                </div>
+                <p id="contact">Contact : 08 19 17 278 1 | &copy; 2022, Omnes Sport.</p>
             </div>
 
-            <div class="service">
-                <h4>Consultations</h4>
-                <p>L.</p>
-            </div>
-
-            <div class="service">
-                <h4>Aimé ou remboursé</h4>
-                <p>L.</p>
-            </div>
-
+            
         </div>
-
-        <p id="contact">Contact : 08 19 17 278 1 | &copy; 2021, Burgure.</p>
     </footer>
 
 </html>
