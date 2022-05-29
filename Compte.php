@@ -47,13 +47,14 @@ $_SESSION["mdp"] = "";
     <div class="conta">
         <div class="container">
             <link rel="stylesheet" href="2.css">
-            <form>
+            <form action="principale.php" method="POST">
                 <h2>OmnesSport</h2>
                 <h2>Se connecter </h2>
                 <br>
-                <input id="truc" type="mail" placeholder="Email"><br>
-                <input id="truc" type="mdp" placeholder="Mot de passe"><br>
-                <input id="truc" onclick="clickMe()" type="button" value="Connexion"><br>
+                <input id="truc" type="mail" name="mail" placeholder="Email"><br>
+                <input id="truc" type="mdp" name="mdp" placeholder="Mot de passe"><br>
+                
+                <input id="truc" type="submit" name="Connexion" value="Connexion"><br>
                 <br>
                 <a href="CreaCompte.html">Créer votre compte client</a>
                 <a href="CreaCompteCoach.html">Créer votre compte coach</a>
@@ -61,41 +62,8 @@ $_SESSION["mdp"] = "";
 
             </form>
 
-            <script>
-                function clickMe() {
-                    var result = "<?php php_func(); ?>"
-                    document.write(result);
-                }
-            </script>
-
-            <?php
-            function php_func()
-            {
-
-                $database = "omnes_sports";
-                $db_handle = mysqli_connect('localhost', 'root', '');
-                $db_found = mysqli_select_db($db_handle, $database);
-
-                $mdp = isset($_POST["mdp"]) ? $_POST["mdp"] : "";
-                $mail = isset($_POST["mail"]) ? $_POST["mail"] : "";
-
-                if ($db_found) {
-                    $sql = "SELECT * FROM coachs WHERE 'mail'='$mail' and 'mdp'='$mdp'";
-                    $num_rows = mysqli_query($db_handle, $sql);
-
-                    if ($num_rows > 0) {
-                        // do something
-                        echo "Trop bien";
-
-                    } else {
-                        // do something else
-                        echo "Trop nul";
-                    }
-                } else {
-                }
-            }
-            ?>
-
+            
+            
             
 
 
