@@ -9,6 +9,8 @@ html {
     position: sticky;
     height: 46px;
     background-color: #1b1b1b;
+    z-index: 1000;
+
   }
   
   .navbar a {
@@ -18,11 +20,14 @@ html {
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
+      z-index: 1000;
+
   }
   
   .dropdown {
       float: left;
-      position: relative;  
+      position: relative; 
+      z-index: 1000;
   }
   
   .dropdown .dropbtn {
@@ -34,10 +39,13 @@ html {
       background-color: inherit;
       font-family: inherit;
       margin: 0;
+      z-index: 1000;
   }
   
   .navbar a:hover, .dropdown:hover .dropbtn {
       background-color: green;
+      z-index: 1000;
+
   }
   
   .dropdown-one {
@@ -45,23 +53,37 @@ html {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: inherit;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
   }
   
   .dropdown-two {
     cursor: pointer;
     display: none;
-    position: relative;
-    left: 160px;
+    position:relative;
+    left: 140px;
     top: 0px;
-    min-width: 160px;
+    min-width: inherit;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+
+  .button {
+    color: black;
+      padding: 12px 16px;
+      display: block;
+      text-align: left;
+      height: 50px;
+      width: 150px;
+      z-index: 1000;
   }
   
   .dropdown:hover .dropdown-one, #link1:hover > .dropdown-two {
     display: block;
+    z-index: 1000;
+
   }
   
   .dropdown-one .dItem {
@@ -71,12 +93,15 @@ html {
       text-align: left;
       height: 50px;
       width: 150px;
+      z-index: 1000;
   }
   
   .dropdown-one .dItem:hover, .dropdown-two a:hover {
       background-color: #ddd;
-  }
+      z-index: 1000;
 
+  }
+  
 header {
     display: flex;
     flex-direction: column;
@@ -96,7 +121,7 @@ header button {
     font-family: 'Prisma Normal', serif;
     cursor: pointer;
 }
-  
+
   /* Style the search box inside the navigation bar */
   .navbar input[type=text] {
     float: right;
@@ -136,41 +161,102 @@ html, body {
   height: 100%;
 }
 
-footer {
-  margin-top: 20px;
-  border-top: 5px solid #6f6f6f;
-  background-color: #1b1b1b;
-  color: #fff;
-  padding: 30px 100px;
+
+.card {
   position: absolute;
-  bottom: 0;
   width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  height: 100%;
+  margin-left: 30%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#item-1:checked ~ .cards #Picture-3, #item-2:checked ~ .cards #Picture-1, #item-3:checked ~ .cards #Picture-2 {
+  transform: translatex(-40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #Picture-2, #item-2:checked ~ .cards #Picture-3, #item-3:checked ~ .cards #Picture-1 {
+  transform: translatex(40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #Picture-1, #item-2:checked ~ .cards #Picture-2, #item-3:checked ~ .cards #Picture-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+
+footer {
+    margin-top: 20px;
+    border-top: 5px solid #6f6f6f;
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 30px 100px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer h1 {
-  font-family: 'Playfair Display', serif;
-  border-bottom: 1px solid white;
-  width: 20%;
-  padding-bottom: 5px;
+    font-family: 'Playfair Display', serif;
+    border-bottom: 1px solid white;
+    width: 20%;
+    padding-bottom: 5px;
 }
 
 footer .services {
-  margin-top: -20px;
-  display: flex;
-  flex-wrap: wrap;
+    margin-top: -20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 footer .services .service {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 footer .services .service p {
-  max-width: 300px;
+    max-width: 300px;
 }
 
 footer #contact {
-  color: rgb(181, 181, 181);
-  margin-bottom: -10px;
+    color: rgb(181, 181, 181);
+    margin-bottom: -10px;
 }
 
 @media screen and (max-width:680px) {

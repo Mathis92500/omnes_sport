@@ -54,7 +54,10 @@ $_SESSION["mdp"] = "";
                 <input id="truc" type="mdp" placeholder="Mot de passe"><br>
                 <input id="truc" onclick="clickMe()" type="button" value="Connexion"><br>
                 <br>
-                <a href="CreaCompte.html">Créer votre compte</a>
+                <a href="CreaCompte.html">Créer votre compte client</a>
+                <a href="CreaCompteCoach.html">Créer votre compte coach</a>
+                <a href="CreaCompteEmployee.html">Créer votre compte administrateur</a>
+
             </form>
 
             <script>

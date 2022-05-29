@@ -15,7 +15,7 @@ $_SESSION["nomMedecin"] = $nom;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site Omnes Sport </title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="Coachs.css">
+  <link rel="stylesheet" href="Coachs1.css">
 
 </head>
 
@@ -35,7 +35,7 @@ $db_found = mysqli_select_db($db_handle, $database);
 
 if ($db_found) {
 
-    $sql = "SELECT * FROM coachs WHERE sport='Cours Collectif'";
+    $sql = "SELECT * FROM coachs WHERE sport='Cours Collectifs'";
     $result = mysqli_query($db_handle, $sql);
     
     echo "<table border=\"1\">";

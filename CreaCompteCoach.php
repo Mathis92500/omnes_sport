@@ -38,7 +38,10 @@
     $nom = isset($_POST["nom"]) ? $_POST["nom"] : "";
     $prenom = isset($_POST["prenom"]) ? $_POST["prenom"] : "";
     $mail = isset($_POST["mail"]) ? $_POST["mail"] : "";
+    $numero = isset($_POST["numero"]) ? $_POST["numero"] : "";
     $mdp = isset($_POST["mdp"]) ? $_POST["mdp"] : "";
+    $sport = isset($_POST["sport"]) ? $_POST["sport"] : "";
+    $bureau = isset($_POST["bureau"]) ? $_POST["bureau"] : "";
 
 
 
@@ -56,8 +59,15 @@
 
        // echo "<p>Database found.</p>";
 
-        $sql = "INSERT INTO `administrateurs` (`nom`,`prenom`,`mail`,`mdp` ) VALUES ('$nom', '$prenom','$mail','$mdp')";
+        $sql = "INSERT INTO `coachs` (`nom`,`prenom`,`bureau`,`telephone`,`sport`,`mail`,`mdp` ) VALUES ('$nom', '$prenom','$bureau','$numero','$sport','$mail','$mdp')";
         $result = mysqli_query($db_handle, $sql);
+        echo "$mail";
+        echo "$nom";
+        echo "$prenom";
+        echo "$numero";
+        echo "$mdp";
+        echo "$sport";
+        echo "$bureau";
 
     } else {
         echo "<br>Database not found";

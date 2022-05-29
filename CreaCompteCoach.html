@@ -1,4 +1,4 @@
-<form method="post" action="traitement.php">
+<form method="post" action="CreaCompteEmployee.php">
  
     <h1>Créer un compte coach </h1>
         <legend>Vos coordonnées pour devenir coach </legend> <!-- Titre du fieldset --> 
@@ -11,7 +11,7 @@
         <input type="text" name="prenom" id="prenom"  required />
         <br>
 
-        <label for="Video">Video *: </label>
+        <!--<label for="Video">Video *: </label>
         <input type="text" name="Video" id="Video"  required />
         <br>
 
@@ -21,35 +21,27 @@
 
         <label for="CV">CV *: </label>
         <input type="text" name="CV" id="CV"  required />
+        <br>-->
+
+        <label for="sport">Sport *:</label>
+        <input type="text" name="sport" id="sport" />
+        <br>
+        <label for="code_postal">Code Postal *:</label>
+        <input type="text" name="code_postal" id="code_postal" />
+        <br>
+        <label for="numero">Numero de Téléphone *:</label>
+        <input type="tel" name="numero" id="numero" />
+        <br>
+        <label for="mail">Mail *:</label>
+        <input type="text" name="mail" id="mail" required />
+        <br>
+        <label for="mdp">Mot de passe *:</label>
+        <input type="password" name="mdp" id="mdp" required  />
+        <br>
+        <label for="bureau">Bureau *:</label>
+        <input type="text" name="bureau" id="bureau" required  />
         <br>
 
-        <label for="Specialite">Specialite *:</label>
-        <input type="text" name="Specialite" id="Specialite" />
-        <br>
-        <label for="CodePostal">Code Postal *:</label>
-        <input type="text" name="CodePostal" id="CodePostal" />
-        <br>
-        <label for="NumeroTel">Numero de Téléphone *:</label>
-        <input type="tel" name="NumeroTel" id="NumeroTel" />
-        <br>
-        <label for="Mail">Mail *:</label>
-        <input type="text" name="Mail" id="Mail" required />
-        <br>
-        <label for="MDP">Mot de passe *:</label>
-        <input type="password" name="MDP" id="MDP" required  />
- 
-        <br>
- 
-
-    <fieldset>
-        <legend>Disponibilité </legend> <!-- Titre du fieldset --> 
-        <label for="Specialite">Specialite *:</label>
-        <input type="text" name="Specialite" id="Specialite" />
-        <br>
-        <label for="CodePostal">Code Postal *:</label>
-        <input type="text" name="CodePostal" id="CodePostal" />
-        <br>
-    </fieldset>
     <input type="submit" value="Creer" />
 
  </form>
